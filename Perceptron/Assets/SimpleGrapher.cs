@@ -121,7 +121,7 @@ public class SimpleGrapher : MonoBehaviour {
 
 	public void DrawPoint(float x, float y, Color c)
 	{
-		Circle((int)(x*scale)+xoffset,(int)(y*scale)+yoffset,5,c);
+		Circle((int)(x*scale)+xoffset, (int)(y*scale)+yoffset, 5, c);
 		tex.Apply();
 		rend.texture = tex;
 	}
@@ -135,7 +135,7 @@ public class SimpleGrapher : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		rend = this.GetComponent<RawImage>();
 		tex = rend.texture as Texture2D;
 
